@@ -93,7 +93,7 @@ label {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 10px;
+    margin: 5px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@ label {
     height: auto;
     max-height: 450px;
     flex: 1 1 225px;
-    max-width: calc(18% - 2px);
+    max-width: calc(16% - 5px);
     position: relative;
 }
 
