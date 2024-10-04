@@ -101,7 +101,7 @@ label {
     height: auto;
     max-height: 450px;
     flex: 1 1 225px;
-    max-width: calc(20% - 5px);
+    max-width: calc(15% - 5px);
     position: relative;
 }
 
