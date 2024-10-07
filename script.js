@@ -1,8 +1,24 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    var uniqueCodeElement = document.getElementById('uniqueCode');
+    var uniqueCode = generateUniqueCode();
+    uniqueCodeElement.textContent = uniqueCode;
+});
+
+function generateUniqueCode() {
+    var timestamp = Date.now();
+    var yearEndNumber = new Date().getFullYear().toString().substr(-1);
+    var mapping = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J'};
+    var secondChar = mapping[yearEndNumber];
+    var randomNum = Math.floor(Math.random() * 10000);
+    return 'E' + secondChar + randomNum.toString().padStart(4, '0');
+}
+
 window.onbeforeunload = () => window.scrollTo(0, 0);
 
 let items = [];
 let headers;
 let skuIndex;
+let selectedItems = new Set();
 let categoryIndex; // Declare categoryIndex in an outer scope
 let subcategoryIndex; // Declare subcategoryIndex in an outer scope
 
