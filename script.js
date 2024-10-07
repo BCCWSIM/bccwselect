@@ -238,36 +238,6 @@ function createCard(dataRowItems) {
     return div;
 }
 
-function toggleSelection(element, itemKey) {
-    const cart = document.getElementById('cart'); // assuming 'cart' is the id of your cart element
-
-    if (selectedItems.has(itemKey)) {
-        selectedItems.delete(itemKey);
-        element.classList.remove('selected');
-    } else {
-        selectedItems.add(itemKey);
-        element.classList.add('selected');
-    }
-
-    // Show or hide quantity input
-    const quantityInput = element.querySelector('.quantity-input');
-    if (element.classList.contains('selected')) {
-        quantityInput.style.display = 'block'; // Show the input
-    } else {
-        quantityInput.style.display = 'none'; // Hide the input
-    }
-
-    // Show or hide cart
-    if (selectedItems.size > 0) {
-        cart.style.display = 'block'; // Show the cart
-    } else {
-        cart.style.display = 'none'; // Hide the cart
-    }
-
-    updateClearSelectionButton();
-    updateTableSelections(); // Add this line
-}
-
 function createImage(cell) {
     const img = document.createElement('img');
     img.src = cell;
