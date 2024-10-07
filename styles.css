@@ -107,7 +107,7 @@ label {
 
 @media (max-width: 400px) {
     .card {
-        max-width: calc(50% - 1px);
+        max-width: calc(42% - 1px);
     }
 }
 
